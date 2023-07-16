@@ -7,7 +7,20 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="index.js"></script>
 </head>
+<h1>Write a Journal Entry</h1>
 <body>
-    
+    <form>
+        <label for=title>Entry Title:</label><br>
+        <input type="text" id="entryTitle"><br>
+        <textarea id="bodyText">Enter text here...</textarea><br>
+        <button id="notSubmit">Do the things</button><br>
+    </form>
+<div id="countOutput">
+    Title: <span id="entryTitleSpan"></span><br>
+    Words: <span id="wordsOutput"></span><br>
+    Vowels: <span id="vowelsOutput"></span><br>
+    Consonants: <span id="consOutput"></span><br>
+    Preview: <span id="teaseOutput"></span><br>
+</div>
 </body>
 </html>

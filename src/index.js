@@ -32,3 +32,20 @@ Entry.prototype.getTeaser = function() {
 
 //user interface
 
+window.addEventListener("load", function () {
+    document.getElementById("notSubmit").addEventListener("click", displayThings);
+})
+
+
+
+function displayThings() {
+    event.preventDefault();
+    const title = document.getElementById("entryTitle").value;
+    const body = document.getElementById("bodyText").value;
+    let newEntry = new Entry(title, body);
+    document.getElementById("entryTitleSpan").innerHTML = newEntry.title;
+    document.getElementById("wordsOutput").innerHTML = newEntry.numberOfWords();
+    document.getElementById("vowelsOutput").innerHTML = newEntry.vowelCounter();
+    document.getElementById("consOutput").innerHTML = newEntry.consonantCounter();
+    document.getElementById("teaseOutput").innerHTML = newEntry.getTeaser();
+}
